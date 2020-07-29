@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>REGISTERATION PAGE</title>
+ <link rel="stylesheet" href="css1/style.css">
+<style>
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+</style>
+</head>
+<form action="reg.jsp" method="post" > 
+  <div class=" login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">voter Register</h2>
+
+  <form class="login-container">
+    <p><input type="text" name="userid" placeholder="Enrollment no" required pattern="[0-9]+" title="contains only numbers"></p>
+    <p><input type="password" name="pwd" placeholder="Password" required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"></p>
+    <p><input type="text" name="fname" placeholder="First Name" required pattern="[a-zA-Z]+" title="contains only characters"></p>
+    <p><input type="text" name="lname" placeholder="Last Name"  required pattern="[a-zA-Z]+" title="contains only characters"></p>
+    <h3><font color="#6495ED">Gender</h3>
+	<label class="container">MALE
+  <input type="radio" checked="checked" name="radio" value="male">
+  <span class="checkmark"></span>
+	</label>
+	<label class="container">FEMALE
+  <input type="radio" name="radio" value="female">
+
+  <span class="checkmark"></span>
+</label>
+    <p><input type="text" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="must be in gmail format example-> xxx@gmail.com"></p>
+   
+ 
+    <p><input type="submit" value="Register"></p>
+
+
+
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+
+     <p><a href="finish.jsp"><b> <i><font color="#F08080"><=Back</font></i></b></a> </p>
+
+
+</form>
+
+
+</body>
+</html>

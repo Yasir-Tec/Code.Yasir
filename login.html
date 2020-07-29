@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  
+  
+  
+      <link rel="stylesheet" href="css1/style.css">
+
+  
+</head>
+
+<body onload="noBack();"
+onpageshow="if(event.persisted) noBack();" onunload="" >
+<form action="login.jsp" method="post">
+  <div class="login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Voter Login</h2>
+
+  <form class="login-container">
+    <p><input type="text" name="usr" placeholder="Enrollment No"  required  pattern="[0-9]+" title="contains only numbers"></p>
+    <p><input type="password" name="pwd" placeholder="Password"  required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"></p>
+    <p><input type="submit" value="Log in"></p>
+        <p><a href="image1.html"><b> <i><font color="#F08080"><=Back</font></i></b></a> </p>
+  </form>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script type="text/javascript">
+	window.history.forward();
+	function noBack() {window.history.forward()}
+	</script>
+  
+
+</body>
+
+</html>
